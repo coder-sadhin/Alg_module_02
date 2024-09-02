@@ -24,3 +24,25 @@ void bfs(int src)
         }
     }
 }
+int main()
+{
+    int n, e;
+    cin >> n >> e;
+    while (e--)
+    {
+        int a, b;
+        cin >> a >> b;
+        v[a].push_back(b);
+        v[b].push_back(a);
+    }
+    int src;
+    cin >> src;
+    memset(vis, false, sizeof(vis));
+    memset(level, -1, sizeof(level));
+    bfs(src);
+    for (int i = 0; i < n; i++)
+    {
+        cout << i << " " << level[i] << endl;
+    }
+    return 0;
+}
