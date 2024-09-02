@@ -34,3 +34,20 @@ void bfs(int src, int des)
         cout << -1 << endl;
     }
 }
+int main()
+{
+    int n, e;
+    cin >> n >> e;
+    while (e--)
+    {
+        int a, b;
+        cin >> a >> b;
+        v[a].push_back(b);
+        v[b].push_back(a);
+    }
+    int src;
+    cin >> src;
+    memset(vis, false, sizeof(vis));
+    
+    return 0;
+}
