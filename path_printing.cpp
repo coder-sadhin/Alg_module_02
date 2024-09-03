@@ -51,6 +51,9 @@ int main()
         x = parent[x];
     }
     reverse(path.begin(), path.end());
-    
+    for (int val : path)
+    {
+        cout << val << " ";
+    }
     return 0;
 }
