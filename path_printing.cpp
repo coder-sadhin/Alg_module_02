@@ -50,6 +50,7 @@ int main()
         path.push_back(x);
         x = parent[x];
     }
-   
+    reverse(path.begin(), path.end());
+    
     return 0;
 }
